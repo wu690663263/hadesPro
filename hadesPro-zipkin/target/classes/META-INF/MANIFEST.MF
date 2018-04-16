@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: hadesPro-zipkin
+Implementation-Version: 1.0
+Built-By: latiao
+Implementation-Vendor-Id: com.anheng.cn
+Build-Jdk: 1.8.0
+Implementation-URL: http://maven.apache.org/hadesPro-zipkin
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

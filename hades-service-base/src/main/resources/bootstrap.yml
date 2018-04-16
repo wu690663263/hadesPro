@@ -1,0 +1,13 @@
+server:
+  port: 9921
+spring:
+ application:
+  name: hades-service-base
+ cloud:
+  config:
+   profile: dev
+   label: master
+   uri: http://localhost:8801/
+   
+  
+ 

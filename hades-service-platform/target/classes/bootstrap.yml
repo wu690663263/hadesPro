@@ -1,0 +1,15 @@
+server:
+  port: 9902
+spring:
+ application:
+  name: hades-service-platform
+ zipkin:
+  base-url: http://localhost:8804    
+ cloud:
+  config:
+   profile: dev
+   label: master
+   uri: http://localhost:8801/
+   
+  
+ 

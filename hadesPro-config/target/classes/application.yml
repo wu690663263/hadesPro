@@ -1,0 +1,15 @@
+spring:
+ application:
+  name: config-server
+ cloud:
+  config:
+   server:
+    git:
+     uri: http://gitlab.info.dbappsecurity.com.cn/john.shi/config-center.git
+     searchPaths: config
+     username: john.shi
+     password: 18210209946@163.com
+   label: master
+server:
+ port: 8801
+
