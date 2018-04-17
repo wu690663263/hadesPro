@@ -56,5 +56,6 @@
   	<module>hades-service-base</module>
   	<module>hadesPro-zipkin</module>
   	<module>hades-service-platform</module>
+  	<module>hadesPro-turbine</module>
   </modules>
 </project>

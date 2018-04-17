@@ -8,15 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.anheng.cn.producer.MqProducer;
+import com.anheng.cn.service.AppService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 public class AppController {
-
 	@Autowired
-	private MqProducer mqProducer;
-	@Autowired
-	private RestTemplate restTemplate;
+	private AppService appService;
 	 @Bean
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
@@ -24,20 +22,10 @@ public class AppController {
     @Value("${hello}")
     String hello;
     
-    @HystrixCommand(fallbackMethod = "backError")
+    
     @RequestMapping(value = "/hello")
     public String hello() throws Exception{
-    	try {
-        	mqProducer.send("hello", "hello,mq");
-        	String back = restTemplate.getForObject("http://localhost:9902/helloApi",String.class);
-        	return back;
-    	}catch(Exception e) {
-    		throw new Exception();
-    	}
-
+    	return appService.sayHello();
     }
     
-    public String backError() {
-    	return "发送mq消息错误";
-    }
 }

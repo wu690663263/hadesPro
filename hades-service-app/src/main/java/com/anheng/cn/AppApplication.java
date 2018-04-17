@@ -16,10 +16,6 @@ import org.springframework.context.annotation.Bean;
 @EnableHystrix
 @EnableHystrixDashboard
 public class AppApplication {
-	@Bean
-    Sampler sampler() {
-        return new AlwaysSampler();
-    }
 	public static void main(String args[]) {
 		SpringApplication.run(AppApplication.class, args);
 	}
