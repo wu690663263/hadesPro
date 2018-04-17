@@ -5,10 +5,10 @@ spring:
   config:
    server:
     git:
-     uri: http://gitlab.info.dbappsecurity.com.cn/john.shi/config-center.git
+     uri: https://github.com/latiaobo/hadesPro.git
      searchPaths: config
-     username: john.shi
-     password: 18210209946@163.com
+     #username: 
+     #password: 
    label: master
 server:
  port: 8801
