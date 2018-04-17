@@ -1,0 +1,9 @@
+test: 12345
+hello: hello
+
+spring:
+ rabbitmq:
+  host: 192.168.71.181
+  port: 5673
+  username: guest
+  password: guest
