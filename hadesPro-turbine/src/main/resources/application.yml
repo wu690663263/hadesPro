@@ -1,0 +1,15 @@
+server:
+  port: 8805
+spring:
+  application:
+    name: turbine-server
+
+eureka:
+  client:
+   serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
+    
+turbine:
+ app-config: gateway-server,hades-service-app,hades-service-base,hades-service-platform
+ cluster-name-expression: new String('default')
+ combine-host-port: true
