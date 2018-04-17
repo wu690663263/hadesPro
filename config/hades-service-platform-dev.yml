@@ -2,6 +2,6 @@ hello: 我已经接收到你的hello，请放心，有事常联系！
 spring:
  rabbitmq:
   host: 127.0.0.1
-  port: 15672
+  port: 5672
   username: guest
   password: guest
